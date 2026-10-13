@@ -1,1 +1,433 @@
-df
+:root {
+  --color-fondo: #f5f6f4;
+  --color-texto: #181818;
+  --color-rojo: #b94a2c;
+  --color-gris: #858986;
+  --ancho-contenido: 850px;
+  --ancho-contenido-relativo: 95%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-rojo);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+abbr {
+  cursor: help;
+}
+
+
+.container {
+  width: var(--ancho-contenido-relativo);
+  max-width: var(--ancho-contenido);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Nombre del sitio */
+
+body > header {
+  width: 100%;
+}
+
+.site-name {
+  margin: 0;
+  padding: 8px 0;
+  color: var(--color-rojo);
+  font-size: 18px;
+  letter-spacing: 4px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* El nombre del sitio no cambia al pasar el ratón */
+
+.site-name a,
+.site-name a:hover {
+  color: var(--color-rojo);
+  text-decoration: none;
+}
+
+/* Barra de navegación */
+
+body > header > nav {
+  width: 100%;
+  background-color: var(--color-rojo);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+body > header > nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+}
+
+body > header > nav li {
+  margin: 0;
+  padding: 0;
+}
+
+body > header > nav a {
+  display: inline-block;
+  color: var(--color-fondo);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Subrayado de los enlaces del menú */
+
+body > header > nav a:hover {
+  text-decoration: underline;
+}
+
+/* Indicadores de la página activa */
+
+body > header > nav a[aria-current="page"]::before {
+  content: "\25CF";
+  margin-right: 6px;
+}
+
+body > header > nav a[aria-current="page"]::after {
+  content: "\25CF";
+  margin-left: 6px;
+}
+
+
+/* ==================================================
+   5. CABECERA DEL ARTÍCULO
+   ================================================== */
+
+article > header.container {
+  padding-top: 24px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+article > header h1 {
+  max-width: 650px;
+  margin: 0 auto 6px;
+  font-size: 30px;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 0 auto 24px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Información de los autores y fecha */
+
+.writers {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-gris);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.writers p {
+  margin-bottom: 4px;
+}
+
+.writers .tag {
+  margin-bottom: 2px;
+}
+
+.writers nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.writers nav li {
+  margin-bottom: 2px;
+}
+
+.writers a {
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   6. IMAGEN PRINCIPAL Y PIE DE FOTO
+   ================================================== */
+
+.antenna_image {
+  width: 100%;
+  margin: 0 0 24px;
+}
+
+.antenna_image > img {
+  width: 100%;
+  height: auto;
+}
+
+.antenna_image figcaption {
+  width: 95%;
+  max-width: var(--ancho-contenido);
+  margin: 8px auto 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+
+/* ==================================================
+   7. CONTENIDO DEL ARTÍCULO
+   ================================================== */
+
+article > .container {
+  padding-bottom: 24px;
+}
+
+/* Introducción */
+
+.intro {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Párrafos de lectura */
+
+article > .container > p {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* Titulares de sección */
+
+article > .container h2 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+/* Evita espacios excesivos entre secciones */
+
+article > .container h2 + p {
+  margin-top: 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   8. ENLACES EXTERNOS E ICONOS
+   ================================================== */
+
+/* Enlaces externos de la imagen y de la fuente */
+
+.external_link,
+.source a {
+  color: var(--color-rojo);
+  text-decoration: none;
+}
+
+/* El subrayado aparece al pasar el ratón */
+
+.external_link:hover,
+.source a:hover {
+  text-decoration: underline;
+}
+
+/* Oculta los iconos incluidos en el HTML.
+   El icono se incorpora mediante CSS. */
+
+.external_link img,
+.source a img {
+  display: none;
+}
+
+.external_link::after,
+.source a::after {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  background-image: url("../img/external-link.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  vertical-align: middle;
+}
+
+
+/* ==================================================
+   9. FUENTE Y LICENCIA DEL ARTÍCULO
+   ================================================== */
+
+.source {
+  margin-top: 28px;
+  margin-bottom: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid var(--color-gris);
+  border-bottom: 1px solid var(--color-gris);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.source p {
+  margin-bottom: 6px;
+}
+
+.source p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==================================================
+   10. FICHAS DE LOS AUTORES
+   ================================================== */
+
+.autor {
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.autor h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.autor img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.autor p {
+  margin-bottom: 0;
+}
+
+
+/* ==================================================
+   11. PIE DE PÁGINA
+   ================================================== */
+
+.pie {
+  width: 100%;
+  padding: 24px 0;
+  background-color: var(--color-texto);
+  color: var(--color-fondo);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.pie .container {
+  width: var(--ancho-contenido-relativo);
+  max-width: var(--ancho-contenido);
+}
+
+.pie p {
+  margin-bottom: 6px;
+}
+
+.pie p:last-child {
+  margin-bottom: 0;
+}
+
+.pie abbr {
+  color: var(--color-fondo);
+}
+
+
+/* ==================================================
+   12. DISEÑO ADAPTABLE
+   ================================================== */
+
+@media (max-width: 600px) {
+  .site-name {
+    font-size: 16px;
+  }
+
+  article > header.container {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+
+  article > header h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+
+  .intro {
+    font-size: 17px;
+  }
+
+  article > .container > p {
+    font-size: 15px;
+  }
+
+  article > .container h2 {
+    font-size: 22px;
+  }
+
+  .antenna_image figcaption {
+    font-size: 10px;
+  }
+}
