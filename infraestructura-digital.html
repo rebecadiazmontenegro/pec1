@@ -2,28 +2,137 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>¿Qué hay detrás de un clic?</title>
-  <meta name="description" content="Artículo que hace un recorrido por todos aquellos elementos físicos que permiten el acceso a internet">
-  <link rel="icon" type="image" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué hay detrás de un clic? Infraestructura digital </title>
+  <meta name="description" content="Recorrido por los elementos físicos que hacen posible conectarse a internet: infraestructura, dispositivos y usuario, con un reportaje sobre qué ocurre con los residuos electrónicos.">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
   <header>
-    <h1 class="site-name">Latencia</h1>
-    <nav>
+    <p class="site-name">
+      <a href="index.html">Latencia</a>
+    </p>
+
+    <nav aria-label="Principal">
       <ul>
-        <li><a href="index.html">Artículo</a></li>
-        <li><a href="infraestructura-digital.html" aria-current="page">Infraestructura</a></li>
-        <li><a href="diccionario-vida-digital.html" >Diccionario</a></li>
+        <li><a href="index.html">
+          Artículo
+        </a></li>
+        <li><a href="infraestructura-digital.html" aria-current="page">
+          Infraestructura
+        </a></li>
+        <li><a href="diccionario-vida-digital.html">
+          Diccionario
+        </a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main class="container">
+    <h1>
+      ¿Qué hay detrás de un clic?
+    </h1>
 
+    <figure class="cite-aristoteles">
+      <blockquote> 
+        <p>
+          No hay nada en el intelecto que no haya pasado antes por los sentidos.
+        </p>
+      </blockquote>
+      <figcaption>
+        — Aristóteles —
+      </figcaption>
+    </figure>
+
+    <p>
+      Cuando se envía un mensaje, se ve un vídeo o se hace una búsqueda en internet, todo parece suceder de manera inmediata e invisible. Sin embargo, detrás de cada clic existe una compleja infraestructura física que hace posible que la información viaje de un lugar a otro.
+    </p>
+    <p>
+      Servidores, centros de datos, cables, antenas, dispositivos y redes trabajan conjuntamente para que sea posible acceder a los servicios digitales. Incluso la energía necesaria para mantener en funcionamiento toda esta infraestructura forma parte de la materialidad de nuestra vida digital.
+    </p>
+    <p>
+      La siguiente lista permite recorrer algunos de los elementos que se encuentran detrás de una experiencia tan cotidiana como conectarse a internet.
+    </p>
+
+    <ol class="infra-list">
+      <li>Infraestructura
+        <ul>
+          <li>Centros de datos
+            <ul>
+              <li>Servidores</li>
+              <li>Sistemas de refrigeración</li>
+            </ul>
+          </li>
+          <li>Redes de comunicación
+            <ul>
+              <li>Cables submarinos</li>
+              <li>Antenas</li>
+              <li>Rúters</li>
+            </ul>
+          </li>
+          <li>Energía
+            <ul>
+              <li>Electricidad</li>
+              <li>Generación de energía</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Dispositivos
+        <ul>
+          <li>Hardware
+            <ul>
+              <li>Pantallas</li>
+              <li>Procesadores</li>
+              <li>Baterías</li>
+            </ul>
+          </li>
+          <li>Conexiones
+            <ul>
+              <li>Wifi</li>
+              <li>5G</li>
+              <li><em lang="en">Bluetooth</em></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Usuario
+        <ul>
+          <li>Aplicaciones
+            <ul>
+              <li>Redes sociales</li>
+              <li><em lang="en">Streaming</em></li>
+              <li>Mensajería</li>
+            </ul>
+          </li>
+          <li>Datos
+            <ul>
+              <li>Fotografías</li>
+              <li>Mensajes</li>
+              <li>Historial de navegación</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+<!-- Fin del articulo/listado y comienzo del video-->
+
+    <h2>
+      ¿Qué ocurre con los residuos electrónicos que generamos?
+    </h2>
+    <p>
+      El siguiente reportaje muestra qué ocurre con los aparatos electrónicos cuando llegan al final de su vida útil y nos acerca al proceso de recuperación de los materiales que contienen.
+    </p>
+
+    <figure class="video">
+      <iframe src="https://www.youtube.com/embed/4JgvWVCCNJ4" title="Objetivo planeta: minería urbana. RTVE Noticias" allowfullscreen></iframe>
+      <figcaption><cite>Objetivo planeta: minería urbana</cite> | RTVE Noticias</figcaption>
+    </figure>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
       <p class="student-name">Rebeca Díaz-Montenegro Sánchez</p>
       <p><abbr title="Universitat Oberta de Catalunya">UOC</abbr>, 2026 | Para la asignatura <abbr title="HyperText Markup Language">HTML</abbr> y <abbr title="Cascading Style Sheets">CSS</abbr></p>

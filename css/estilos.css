@@ -56,7 +56,6 @@ abbr {
   cursor: help;
 }
 
-
 .container {
   width: var(--ancho-contenido-relativo);
   max-width: var(--ancho-contenido);
@@ -64,7 +63,7 @@ abbr {
   margin-left: auto;
 }
 
-/* Nombre del sitio */
+/* Nombre del sitio: LATENCIA */
 
 body > header {
   width: 100%;
@@ -74,14 +73,14 @@ body > header {
   margin: 0;
   padding: 8px 0;
   color: var(--color-rojo);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
+  font-weight: 700;
   letter-spacing: 4px;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
 }
-
-/* El nombre del sitio no cambia al pasar el ratón */
 
 .site-name a,
 .site-name a:hover {
@@ -89,7 +88,7 @@ body > header {
   text-decoration: none;
 }
 
-/* Barra de navegación */
+/* Barra de navegación princial (Artículo,Infraestructura y Diccionario)*/
 
 body > header > nav {
   width: 100%;
@@ -120,13 +119,11 @@ body > header > nav a {
   text-decoration: none;
 }
 
-/* Subrayado de los enlaces del menú */
-
 body > header > nav a:hover {
   text-decoration: underline;
 }
 
-/* Indicadores de la página activa */
+/* Puntitos junto a los enlaces para indicar que en que página se esta */
 
 body > header > nav a[aria-current="page"]::before {
   content: "\25CF";
@@ -138,10 +135,7 @@ body > header > nav a[aria-current="page"]::after {
   margin-left: 6px;
 }
 
-
-/* ==================================================
-   5. CABECERA DEL ARTÍCULO
-   ================================================== */
+/* Cabecera de los artículos */
 
 article > header.container {
   padding-top: 24px;
@@ -162,16 +156,15 @@ article > header h1 {
   line-height: 1.4;
 }
 
-/* Información de los autores y fecha */
-
 .writers {
   max-width: 600px;
   margin: 0 auto;
   padding-top: 12px;
   border-top: 1px solid var(--color-gris);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 700;
 }
 
 .writers p {
@@ -180,6 +173,8 @@ article > header h1 {
 
 .writers .tag {
   margin-bottom: 2px;
+  font-size: 11px;
+
 }
 
 .writers nav ul {
@@ -191,15 +186,6 @@ article > header h1 {
 .writers nav li {
   margin-bottom: 2px;
 }
-
-.writers a {
-  font-weight: 700;
-}
-
-
-/* ==================================================
-   6. IMAGEN PRINCIPAL Y PIE DE FOTO
-   ================================================== */
 
 .antenna_image {
   width: 100%;
@@ -221,16 +207,9 @@ article > header h1 {
   text-align: center;
 }
 
-
-/* ==================================================
-   7. CONTENIDO DEL ARTÍCULO
-   ================================================== */
-
 article > .container {
   padding-bottom: 24px;
 }
-
-/* Introducción */
 
 .intro {
   margin-bottom: 20px;
@@ -238,22 +217,16 @@ article > .container {
   line-height: 1.5;
 }
 
-/* Párrafos de lectura */
-
 article > .container > p {
   font-size: 16px;
   line-height: 1.55;
 }
-
-/* Titulares de sección */
 
 article > .container h2 {
   margin-top: 28px;
   margin-bottom: 12px;
   font-size: 24px;
 }
-
-/* Evita espacios excesivos entre secciones */
 
 article > .container h2 + p {
   margin-top: 0;
@@ -264,11 +237,7 @@ strong {
 }
 
 
-/* ==================================================
-   8. ENLACES EXTERNOS E ICONOS
-   ================================================== */
-
-/* Enlaces externos de la imagen y de la fuente */
+/* Enlaces externos con imagen y subrayado */
 
 .external_link,
 .source a {
@@ -276,19 +245,9 @@ strong {
   text-decoration: none;
 }
 
-/* El subrayado aparece al pasar el ratón */
-
 .external_link:hover,
 .source a:hover {
   text-decoration: underline;
-}
-
-/* Oculta los iconos incluidos en el HTML.
-   El icono se incorpora mediante CSS. */
-
-.external_link img,
-.source a img {
-  display: none;
 }
 
 .external_link::after,
@@ -304,11 +263,6 @@ strong {
   content: "";
   vertical-align: middle;
 }
-
-
-/* ==================================================
-   9. FUENTE Y LICENCIA DEL ARTÍCULO
-   ================================================== */
 
 .source {
   margin-top: 28px;
@@ -330,10 +284,7 @@ strong {
   margin-bottom: 0;
 }
 
-
-/* ==================================================
-   10. FICHAS DE LOS AUTORES
-   ================================================== */
+/* Apartado de autores */
 
 .autor {
   margin-bottom: 20px;
@@ -360,11 +311,9 @@ strong {
 }
 
 
-/* ==================================================
-   11. PIE DE PÁGINA
-   ================================================== */
+/* Footer */
 
-.pie {
+.footer {
   width: 100%;
   padding: 24px 0;
   background-color: var(--color-texto);
@@ -375,27 +324,25 @@ strong {
   text-align: center;
 }
 
-.pie .container {
+.footer .container {
   width: var(--ancho-contenido-relativo);
   max-width: var(--ancho-contenido);
 }
 
-.pie p {
+.footer p {
   margin-bottom: 6px;
 }
 
-.pie p:last-child {
+.footer p:last-child {
   margin-bottom: 0;
 }
 
-.pie abbr {
+.footer abbr {
   color: var(--color-fondo);
 }
 
 
-/* ==================================================
-   12. DISEÑO ADAPTABLE
-   ================================================== */
+/* Resposive */
 
 @media (max-width: 600px) {
   .site-name {
@@ -430,4 +377,146 @@ strong {
   .antenna_image figcaption {
     font-size: 10px;
   }
+}
+
+q,
+cite {
+  font-weight: 700;
+}
+
+
+main.container {
+  padding-bottom: 24px;
+}
+
+main.container > h1 {
+  margin: 24px 0;
+  font-size: 36px;
+  text-align: center;
+}
+
+main.container > h2 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+/* Cita grande */
+
+.cite-aristoteles {
+  margin: 24px 0 24px 48px;
+}
+
+.cite-aristoteles blockquote {
+  margin: 0;
+  padding-left: 16px;
+  border-left: 4px solid var(--color-gris);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cite-aristoteles blockquote p {
+  margin: 0;
+}
+
+.cite-aristoteles figcaption {
+  margin: 8px 0 0 20px;
+  font-size: 16px;
+}
+
+.infra-list {
+  margin: 16px 0 24px;
+  padding-left: 48px;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.infra-list > li::marker {
+  color: var(--color-rojo);
+}
+
+.infra-list ul {
+  padding-left: 32px;
+  font-size: 17px;
+  list-style-type: square;
+}
+
+.infra-list ul ul {
+  list-style-type: disc;
+}
+
+.infra-list ul li::marker {
+  color: var(--color-rojo);
+}
+
+/* Vídeo */
+
+.video {
+  margin: 16px 0 0;
+}
+
+.video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.video figcaption {
+  margin: 8px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+main > header.container {
+  padding-top: 24px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+main > header.container h1 {
+  max-width: 650px;
+  margin: 0 auto 6px;
+  font-size: 36px;
+}
+
+main > header.container .subtitle {
+  font-size: 20px;
+}
+
+.cable_image {
+  width: 100%;
+  margin: 0 0 24px;
+}
+
+.cable_image > img {
+  width: 100%;
+  height: auto;
+}
+
+.cable_image figcaption {
+  width: 95%;
+  max-width: var(--ancho-contenido);
+  margin: 8px auto 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.dictionary {
+  margin: 0;
+}
+
+.dictionary dt {
+  margin-top: 20px;
+  border-bottom: 1px solid var(--color-gris);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.dictionary dd {
+  margin: 0 0 12px 24px;
 }
